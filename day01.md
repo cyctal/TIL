@@ -103,12 +103,27 @@ $ rm -r test
 + [Markdown Guide](https://www.markdownguide.org/basic-syntax/)
 + [마크다운 문법 정리](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 
-## Today I Learned
-- 좋은 개발자가 되기 위해 하루동안 학습한 내용이나 개발 관련 경험들을 기록으로 남긴다.
-- 날짜를 표시하지 않는 이유는 조급해지지 않고 꾸준히 하기 위함이다.
-  
-### 작성 규칙
-- 폴더와 파일명은 영문으로 작성한다.
-- 해당 문서를 다시 봤을 때, 추가적인 검색의 비용이 들지 않도록 자세히 기록한다.
-- 더 많은 공유를 원하는 기록은 블로그에 포스팅한다.
-- 쉴 땐 확실히 쉬고, 
+## Git 기초
+---
+### [1] Git의 초기 설정
+> 최초 한 번만 설정하는 것으로, 매번 할 필요가 없다.
+1. 이름과 이메일을 설정한다. 작성자를 수정하고자 할 경우 이름과 메일 주소만 다르게 하여 동일한 방법으로 입력한다.
+
+```git
+$git config --global user.name "이름"
+$git config --global user.email "메일 주소"
+```
+
+2. 작성자가 잘 설정됐는지 확인하는 법
+```git
+$git config --global -l
+또는
+$git config --global -list
+```
+
+### [2] Git의 기본 명령어
+(0) 로컬 저장소
+- Working Directory(= Working Tree) : 사용자의 일반적인 작업이 일어나는 곳
+- Staging Area(= Index) : 커밋을 위한 파일 및 변경사항(커밋)을 저장하는 곳
+- Repository : Staging Area에 있던 파일 및 폴더의 변경사항(커밋)을 저장하는 곳
+- Git은 Working Directory -> Staging Area -> Repository의 과정으로 버전 관리를 수행한다.
